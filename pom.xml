@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 指定当前pom模型版本，maven2和3都是4.0.0 -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tms.gulimall</groupId>
+    <artifactId>gulimall</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- 项目别名 -->
+    <name>gulimall</name>
+    <!-- 项目描述 -->
+    <description>聚合服务</description>
+    <!-- 项目打包类型，一般为jar、war，如果是父类型，就标记为pom -->
+    <!--
+        pom的项目里没有java代码，也不执行任何代码，只是为了聚合工程或传递依赖用，执行
+        maven命令的时候，会首先对父项目执行，当父项目的的packaing类型为pom时，将对
+        所有的子模块执行同样的命令
+     -->
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>gulimall-coupon</module>
+        <module>gulimall-member</module>
+        <module>gulimall-order</module>
+        <module>gulimall-product</module>
+        <module>gulimall-ware</module>
+    </modules>
+</project>
